@@ -4,9 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const pool = new pg.Pool({
-  // database: "steam",
-});
+const pool = new pg.Pool();
 
 const PORT = process.env.PORT || 3000;
 
