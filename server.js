@@ -6,8 +6,6 @@ dotenv.config();
 
 const { DATABASE_URL, NODE_ENV, PORT } = process.env;
 
-// const sslConfig =
-
 const pool = new pg.Pool({
   connectionString: DATABASE_URL,
   ssl: NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
